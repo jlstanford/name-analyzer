@@ -26,11 +26,11 @@ describe('Arcana API', () => {
             'Judgement',
             'The World'
         ];
-        expect( JSON.parse(actualArcanaReturn) ).toEqual(expectedArcanaReturn);
+        expect( actualArcanaReturn ).toEqual(expectedArcanaReturn);
     });
     it("should return a meaning of determination for The Chariot", () => {
         let actualMeaningReturn = Arcana.getMeaning("TheChariot");
         let expectedMeaningReturn = "determination";
-        expect( JSON.parse(actualMeaningReturn)["Meaning"] ).toEqual(expectedMeaningReturn);
+        expect( actualMeaningReturn["Meaning"] ).toEqual(expectedMeaningReturn);
     });
 })

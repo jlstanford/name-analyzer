@@ -37,9 +37,9 @@ function generateAnalysis({}){
 
 module.exports = { 
     analyze: (name,arcana) => {
-        analysisKeywords["Name"] = JSON.parse(nameObj.getMeaning(name));
-        analysisKeywords["Arcana"] = JSON.parse( arcanaObj.getMeaning(arcana) );
-        return JSON.stringify(generateAnalysis(analysisKeywords,name,arcana));
+        analysisKeywords["Name"] = nameObj.getMeaning(name.toUpperCase());
+        analysisKeywords["Arcana"] =  arcanaObj.getMeaning(arcana.toUpperCase() );
+        return generateAnalysis(analysisKeywords,name,arcana);
     },
     generateAnalysis: generateAnalysis
 }

@@ -10,9 +10,9 @@ module.exports = function(app) {
     });
     app.route('/name/:name').get(function(req,res,next){
         var name = req.params.name;
-        Name.getMeaning(name);
+        var ret = Name.getMeaning(name);
         console.table(res);
-        res.json({"success":"200"});
+        res.json(ret);
     });
     app.route('/arcana').get(function(req,res,next){
        let arcana = Arcana.getAllArcana();
@@ -24,8 +24,9 @@ module.exports = function(app) {
         let ret = Arcana.getMeaning(arcanaName);
         res.json(ret);
     });
-    app.route('/analysis').post(function(req,res,next){
-        let ret = Analyzer.analyze(req.name,req.arcanaName);
+    app.route('/analysis/:name/:arcanaName').get(function(req,res,next){
+        console.log(req.params);
+        let ret = Analyzer.analyze(req.params.name,req.params.arcanaName);
         res.json(ret);
     });
 };

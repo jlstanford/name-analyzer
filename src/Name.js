@@ -1,13 +1,13 @@
 nameMeanings = {
-    'Linda':'beautiful',
-    'Patricia':'noble',
-    'Mary':'rebellious',
-    'Robert':'bright',
-    'John':'kind',
-    'Michael':'godly',
-    'James': 'a force of nature',
-    'Jessica':'wealthy',
-    'Ashley':'wise',
+    'LINDA':'beautiful',
+    'PATRICIA':'noble',
+    'MARY':'rebellious',
+    'ROBERT':'bright',
+    'JOHN':'kind',
+    'MICHAEL':'godly',
+    'JAMES': 'a force of nature',
+    'JESSICA':'wealthy',
+    'ASHLEY':'wise',
     'A':'resourceful',
     'B':'intuitive',
     'C':'nurturing',
@@ -51,10 +51,10 @@ function getMeaning(name) {
     {
         nameCharacteristics.push( nameMeanings['doubleletters'] );
     }
-    if(nameMeanings[name]!==undefined){
-        nameCharacteristics.push( nameMeanings[name] );
+    if(nameMeanings[name.toUpperCase()]!==undefined){
+        nameCharacteristics.push( nameMeanings[name.toUpperCase()] );
     }
-    return JSON.stringify(nameCharacteristics);
+    return nameCharacteristics;
     
 };
 module.exports = {
