@@ -22,7 +22,7 @@ majorArcana= [
     'The Sun',
     'Judgement',
     'The World'
-];
+]
 
 arcanaMeanings = {
     'THEFOOL':{'Meaning':'a free spirit','Destiny':'You will remain true to yourself despite the obstacles you face.'},
@@ -47,23 +47,23 @@ arcanaMeanings = {
     'THESUN':{'Meaning':'success','Destiny':'You always see the beauty in the storm.'},
     'JUDGEMENT':{'Meaning':'absolution','Destiny':'You have a strong grasp of right and wrong.'},
     'THEWORLD':{'Meaning':'accomplishment','Destiny':'You will encourage yourself and those around you to be their best toward the best possible outcome.'}
-};
+}
 
 function getMeaning(arcanaName)
 {
     if(arcanaMeanings[(arcanaName.trim().toUpperCase())] != undefined){
-        return arcanaMeanings[(arcanaName.trim().toUpperCase())];
+        return arcanaMeanings[(arcanaName.trim().toUpperCase())]
     }else {
-        return {"Error":"802","Message":`Bad Argument; ${arcanaName} is not a valid major arcana`,"Arcana":getAllArcana()};
+        return {"Error":"802","Message":`Bad Argument; ${arcanaName} is not a valid major arcana`,"Arcana":getAllArcana()}
     }
-};
+}
 
 function getAllArcana()
 {
-    return majorArcana;
-};
+    return majorArcana
+}
     
 module.exports ={
     getAllArcana:getAllArcana,
     getMeaning: getMeaning
-};
+}

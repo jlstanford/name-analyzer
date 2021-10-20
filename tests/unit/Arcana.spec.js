@@ -1,7 +1,7 @@
 const Arcana = require('../../src/Arcana')
 describe('Arcana API', () => {
     it("should return a list of the 21 major arcana", () => {
-        let actualArcanaReturn = Arcana.getAllArcana();
+        let actualArcanaReturn = Arcana.getAllArcana()
         let expectedArcanaReturn = [
             'The Fool',
             'The Magician',
@@ -25,12 +25,12 @@ describe('Arcana API', () => {
             'The Sun',
             'Judgement',
             'The World'
-        ];
-        expect( actualArcanaReturn ).toEqual(expectedArcanaReturn);
-    });
+        ]
+        expect( actualArcanaReturn ).toEqual(expectedArcanaReturn)
+    })
     it("should return a meaning of determination for The Chariot", () => {
-        let actualMeaningReturn = Arcana.getMeaning("TheChariot");
-        let expectedMeaningReturn = "determination";
-        expect( actualMeaningReturn["Meaning"] ).toEqual(expectedMeaningReturn);
-    });
+        let actualMeaningReturn = Arcana.getMeaning("TheChariot")
+        let expectedMeaningReturn = "determination"
+        expect( actualMeaningReturn["Meaning"] ).toEqual(expectedMeaningReturn)
+    })
 })

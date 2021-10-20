@@ -36,27 +36,25 @@ nameMeanings = {
     'Z':'funky',
     '-endsInA':'frustrating',
     'doubleletters':'friendly'
-};
+}
 function getMeaning(name) {
-    const endsInARegex = '[a-zA-Z]*[a][^a-zA-Z0-9]';
-    const doubleLettersRegex = '[a]{2}|[b]{2}|[c]{2}|[d]{2}|[e]{2}|[f]{2}|[g]{2}|[h]{2}|[i]{2}|[j]{2}|[k]{2}|[l]{2}|[m]{2}|[n]{2}|[o]{2}|[p]{2}|[q]{2}|[r]{2}|[s]{2}|[t]{2}|[u]{2}|[v]{2}|[w]{2}|[x]{2}|[y]{2}|[z]{2}';
-    var nameCharacteristics = [];
-    var nameArray = name.split('');
+    const doubleLettersRegex = '[a]{2}|[b]{2}|[c]{2}|[d]{2}|[e]{2}|[f]{2}|[g]{2}|[h]{2}|[i]{2}|[j]{2}|[k]{2}|[l]{2}|[m]{2}|[n]{2}|[o]{2}|[p]{2}|[q]{2}|[r]{2}|[s]{2}|[t]{2}|[u]{2}|[v]{2}|[w]{2}|[x]{2}|[y]{2}|[z]{2}'
+    var nameCharacteristics = []
+    var nameArray = name.split('')
     for(characterIdx in name.split(''))
     {
-        nameCharacteristics.push(nameMeanings[nameArray[characterIdx].toUpperCase()]);
+        nameCharacteristics.push(nameMeanings[nameArray[characterIdx].toUpperCase()])
     }
-    var doubleLetters = name.match(doubleLettersRegex);
+    var doubleLetters = name.match(doubleLettersRegex)
     if(doubleLetters!=null)
     {
-        nameCharacteristics.push( nameMeanings['doubleletters'] );
+        nameCharacteristics.push( nameMeanings['doubleletters'] )
     }
     if(nameMeanings[name.toUpperCase()]!==undefined){
-        nameCharacteristics.push( nameMeanings[name.toUpperCase()] );
+        nameCharacteristics.push( nameMeanings[name.toUpperCase()] )
     }
-    return nameCharacteristics;
-    
-};
+    return nameCharacteristics
+}
 module.exports = {
     getMeaning: getMeaning
 }
