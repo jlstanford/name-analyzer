@@ -3,8 +3,6 @@ module.exports = function(app) {
     var Name = require('../src/Name')
     var Arcana = require('../src/Arcana')
     var Analyzer = require('../src/NameAnalyzer')
-
-    console.table(Name)
     app.route('/').get(function(req,res,next){
         res.json({"success":"200"})
     })

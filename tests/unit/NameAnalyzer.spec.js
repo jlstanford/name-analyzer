@@ -2,8 +2,7 @@ const Analyzer = require('../../src/NameAnalyzer')
 describe('Name Analyzer API', () => {
     it("should return an array of characteristics for 'Jessica'; 'Death' ", () => {
         let actualAnalysisReturn = Analyzer.analyze("Jessica","Death")
-        console.table(actualAnalysisReturn)
-        expect( actualAnalysisReturn.length).toEqual(5)
+        expect( actualAnalysisReturn.length).toEqual(4)
     })
     it("should return an array of different statements based on characteristics for 'Jessica'; 'Death' ", () => {
         let actualAnalysisReturn = Analyzer.analyze("Jessica","Death")
