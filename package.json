@@ -1,0 +1,28 @@
+{
+  "name": "nameanalyzer",
+  "version": "1.0.0",
+  "description": "name analysis code test",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "nameanalyzer": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nameanalyzer"
+  },
+  "keywords": [
+    "volley",
+    "name",
+    "analysis",
+    "nameanalyzer"
+  ],
+  "author": "Jessica Stanford",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.3.0"
+  }
+}
