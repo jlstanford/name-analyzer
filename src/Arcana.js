@@ -51,7 +51,12 @@ arcanaMeanings = {
 
 function getMeaning(arcanaName)
 {
-    return arcanaMeanings[(arcanaName.trim().toUpperCase())];
+    if(arcanaMeanings[(arcanaName.trim().toUpperCase())] != undefined){
+        return arcanaMeanings[(arcanaName.trim().toUpperCase())];
+    }else {
+        return {"Error":"802","Message":"Bad Argument; That is not a valid major arcana","Arcana":getAllArcana()};
+    }
+    
 };
 
 function getAllArcana()

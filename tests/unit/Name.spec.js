@@ -8,7 +8,6 @@ describe('Name API', () => {
     it("should return 'Friendly' if name has double letters", () => {
         let actualMeaningReturn = Name.getMeaning("Jessica");
         let expectedMeaningReturn = "friendly";
-        console.log(actualMeaningReturn);
         expect( actualMeaningReturn ).toContain(expectedMeaningReturn);
     });
 })
