@@ -20,7 +20,7 @@
   "author": "Jessica Stanford",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "jest": "^27.3.0"
